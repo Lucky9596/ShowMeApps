@@ -1,21 +1,41 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+//------
+import MainLayout from "./components/MainLayout";
 import DashBoard from "./pages/Dashboard";
+//-------contact--------------
+import ContactList from "./pages/ContactList";
 import Create from "./pages/Create";
 import Setting from "./pages/Setting";
 
 const App = () => {
-  return (
-    <Router>
-      <div>
-        <Routes>
-          <Route exact path="/" element={<DashBoard />} />
-          <Route path="/create" element={<Create />} />
-          <Route path="/setting" element={<Setting />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <MainLayout />,
+      children: [
+        {
+          element: <DashBoard />,
+          index: true,
+        },
+        {
+          path: "/contact",
+          element: <ContactList />,
+        },
+        {
+          path: "/contact/create",
+          element: <Create />,
+        },
+        {
+          path: "/contact/setting",
+          element: <Setting />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 };
 
 export default App;

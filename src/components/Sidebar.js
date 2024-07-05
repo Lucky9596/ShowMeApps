@@ -28,6 +28,9 @@ const Sidebar = () => {
         <CSidebarBrand href="/">ShowMeApps</CSidebarBrand>
       </CSidebarHeader>
       <CSidebarNav>
+        <CNavItem href="/">
+          <CIcon customClassName="nav-icon" icon={cilSpeedometer} /> Dashboard
+        </CNavItem>
         <CNavTitle>Admin Menu</CNavTitle>
         <CNavGroup
           toggler={
@@ -36,22 +39,25 @@ const Sidebar = () => {
             </>
           }
         >
-          <CNavItem href="/create">
+          <CNavItem href="/contact">
+            <span className="nav-icon">
+              <span className="nav-icon-bullet"></span>
+            </span>{" "}
+            List
+          </CNavItem>
+          <CNavItem href="/contact/create">
             <span className="nav-icon">
               <span className="nav-icon-bullet"></span>
             </span>{" "}
             Create
           </CNavItem>
-          <CNavItem href="/setting">
+          <CNavItem href="/contact/setting">
             <span className="nav-icon">
               <span className="nav-icon-bullet"></span>
             </span>{" "}
             Setting <CBadge color="success ms-auto">PRO</CBadge>
           </CNavItem>
         </CNavGroup>
-        <CNavItem href="#">
-          <CIcon customClassName="nav-icon" icon={cilSpeedometer} /> 2nd Menu
-        </CNavItem>
         <CNavItem href="#">
           <CIcon customClassName="nav-icon" icon={cilSpeedometer} /> 3rd Menu
         </CNavItem>

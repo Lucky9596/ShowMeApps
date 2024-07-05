@@ -12,7 +12,7 @@ import { CCardTitle, CSmartTable } from "@coreui/react-pro";
 
 const ContactList = () => {
   const [tblData, setTblData] = useState([]);
-  const { loading, error, sendGetRequest } = useGetCallback();
+  const { isLoading, error, sendGetRequest } = useGetCallback();
 
   useEffect(() => {
     sendGetRequest(`${process.env.REACT_APP_SERVER_URL}/api/contact`)
@@ -80,7 +80,7 @@ const ContactList = () => {
         <CCardBody>
           <CCardTitle>Contact List</CCardTitle>
           <CSmartTable
-            loading={loading}
+            loading={isLoading}
             columns={columns}
             items={tblData}
             itemsPerPageSelect

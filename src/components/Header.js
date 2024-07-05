@@ -23,7 +23,7 @@ import {
   CNavLink,
   CRow,
 } from "@coreui/react-pro";
-import { cilHamburgerMenu } from "@coreui/icons";
+import { cilHamburgerMenu, cilBell, cilUser } from "@coreui/icons";
 import React, { useState } from "react";
 
 const Header = () => {
@@ -40,18 +40,18 @@ const Header = () => {
           </CHeaderToggler>
           <CHeaderNav>
             <CNavItem>
-              <CNavLink href="#">Button</CNavLink>
-            </CNavItem>
-            <CNavItem>
-              <CNavLink href="#">Button</CNavLink>
+              <CNavLink href="#">
+                <CIcon icon={cilBell} />
+              </CNavLink>
             </CNavItem>
             <CDropdown variant="nav-item">
-              <CDropdownToggle color="secondary">Login</CDropdownToggle>
+              <CDropdownToggle color="secondary">
+                <CIcon icon={cilUser} />
+              </CDropdownToggle>
               <CDropdownMenu>
-                <CDropdownItem href="#">Action</CDropdownItem>
-                <CDropdownItem href="#">Another action</CDropdownItem>
+                <CDropdownItem href="#">LogIn</CDropdownItem>
                 <CDropdownDivider />
-                <CDropdownItem href="#">Something else here</CDropdownItem>
+                <CDropdownItem href="#">SignUp</CDropdownItem>
               </CDropdownMenu>
             </CDropdown>
           </CHeaderNav>
