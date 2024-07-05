@@ -1,0 +1,12 @@
+{
+  "name": true,
+  "email": true,
+  "pwd": true,
+  "phone": true,
+  "address": false,
+  "gender": true,
+  "birth": true,
+  "state": false,
+  "sports": false,
+  "parent": false
+}
