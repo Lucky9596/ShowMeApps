@@ -1,13 +1,12 @@
 import React from "react";
-import { CContainer, CCol, CRow } from "@coreui/react-pro";
+import { CContainer } from "@coreui/react-pro";
 import { Outlet } from "react-router-dom";
-import ContactList from "./ContactList";
-import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
-import Footer from "../components/Footer";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+import Footer from "./Footer";
 import { Col, Row } from "antd";
 
-const DashBoard = () => {
+const MainLayout = () => {
   return (
     <>
       <Row style={{ minHeight: "100vh" }}>
@@ -20,10 +19,11 @@ const DashBoard = () => {
             style={{
               overflow: "auto",
               height: "calc(100vh - 102px)",
-              // maxWidth: "calc(100vw - 256px)",
+              maxWidth: "calc(100vw - 256px)",
+              padding: "48px 24px",
             }}
           >
-            <ContactList />
+            <Outlet />
           </CContainer>
           <Footer />
         </Col>
@@ -32,4 +32,4 @@ const DashBoard = () => {
   );
 };
 
-export default DashBoard;
+export default MainLayout;
