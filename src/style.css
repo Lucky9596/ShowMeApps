@@ -1,0 +1,49 @@
+.second-p-style {
+    font-size: 14px;
+    font-family: 'Inter' , sans-serif;
+    color: #6B7280;
+    margin: 0;
+}
+
+.title-h1-style {
+    font-family: 'Inter' , sans-serif;
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    color: #09090B;
+}
+
+.title-h3-style {
+    font-family: 'Inter' , sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #09090B;
+    margin: 0;
+}
+
+.title-label-style {
+    font-size: 14px;
+    font-family: 'Inter' , sans-serif;
+    color: #6B7280;
+    /* margin: 0; */
+}
+
+.subtitle-label-style {
+    font-family: 'Inter' , sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1;
+    color: #09090B;
+    margin: 0;
+}
+
+.col-register-margin {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* .form-check-input:checked {
+    background-color:#09090B;
+    border-color:#09090B;
+} */
